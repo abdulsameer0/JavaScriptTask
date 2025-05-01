@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-1</title>
+    <script>
+
+
+        // 1. Print numbers from 100 to 1 (in reverse) using both loop for and while.
+
+        // for loop
+
+        for (let i = 100; i >= 1; i--) {
+            console.log(i);
+        }
+        console.log("-------");
+
+        // while loop
+
+        let i = 100;
+        while (i >= 1) {
+            console.log(i);
+            i -= 1;
+        }
+
+        // 2. Print "Yes" if a number is less than 100, otherwise print "No".
+
+        let input = prompt("Enter a numbr :");
+        let number = Number(input);
+        if (number < 100) {
+            console.log(number + " : Yes! this is a less then 100");
+        } else {
+            console.log(number + " : No! this is not less than 100");
+        }
+
+        // 3. Merge two arrays and sort the result(descending order).
+
+        let arr1 = [5, 3, 6, 9, 1];
+        let arr2 = [2, 4, 8, 10, 7];
+
+        let arr3 = arr1.concat(arr2);
+        arr3.sort((a, b) => b - a);
+        console.log(arr3);
+
+        // 4. Generate a random number and charterers (number limit 6)
+
+        let characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        let result = "";
+
+        for (let i = 0; i < 6; i++) {
+            let randomChar = Math.floor(Math.random() * characters.length);
+            result += characters[randomChar];
+        }
+
+        console.log("Random String:", result);
+
+
+        // 5. Swap two numbers without using a third variable
+
+        let a = 100;
+        let b = 200;
+
+        let temp = a;
+        a = b;
+        b = temp;
+
+        console.log(a);
+        console.log(b);
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
