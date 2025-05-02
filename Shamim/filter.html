@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        
+
+
+        const userlist = [
+            { name: "Sameer", salary: 30000, country: "India" },
+            { name: "Arbaj", salary: 40000, country: "UK" },
+            { name: "Arish", salary: 20000, country: "India" },
+            { name: "Juhi", salary: 50000, country: "US" },
+            { name: "Tanishka", salary: 60000, country: "Arab" },
+            { name: "Mahak", salary: 60000, country: "UK" },
+            { name: "Rohit", salary: 60000, country: "India" }
+        ];
+
+        let indiaUserList = [];
+
+        // for(let i=0; i<userlist.length; i++){
+        //     let user = userlist[i];
+        //     if(user.country === "India") {
+        //         indiaUserList.push(user);
+        //     }
+        // }
+
+        indiaUserList = userlist.filter(user => user.country === "India");
+
+
+
+        console.log(indiaUserList);
+
+
+
+
+
+
+
+        let windowUrl = window.location.href;
+
+        console.log(windowUrl);
+        let arrayValue = windowUrl.split("/");
+
+        console.log(arrayValue);
+
+        let lastIndex = arrayValue.length - 1;
+
+        console.log(lastIndex);
+
+        let lastValue = arrayValue[lastIndex];
+
+        console.log(lastValue);
+
+        let fileName = lastValue.split(".")[0];
+
+        console.log(fileName);
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
