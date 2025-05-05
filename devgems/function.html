@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Filter by Country</title>
+</head>
+<body>
+
+  <h2>Select Country</h2>
+
+  <select id="countrySelect" onchange="filterByCountry()"></select>
+
+  <div id="result"></div>
+
+  <script>
+    const userlist = [
+      { name: "Sameer", salary: 30000, country: "India" },
+      { name: "Arbaj", salary: 40000, country: "UK" },
+      { name: "Arish", salary: 20000, country: "India" },
+      { name: "Juhi", salary: 50000, country: "US" },
+      { name: "Tanishka", salary: 60000, country: "Arab" },
+      { name: "Mahak", salary: 60000, country: "UK" },
+      { name: "Rohit", salary: 60000, country: "India" },
+      { name: "Devgems", salary: 160000, country: "Oman" }
+    ];
+
+    function populateDropdown() {
+      const dropdown = document.getElementById("countrySelect");
+      const countrySet = [];
+
+      for (let i = 0; i < userlist.length; i++) {
+        if (!countrySet.includes(userlist[i].country)) {
+          countrySet.push(userlist[i].country);
+        }
+      }
+
+      for (let j = 0; j < countrySet.length; j++) {
+        const option = document.createElement("option");
+        option.value = countrySet[j];
+        option.text = countrySet[j];
+        dropdown.appendChild(option);
+      }
+    }
+
+    function filterByCountry() {
+      const selectedCountry = document.getElementById("countrySelect").value;
+      const resultDiv = document.getElementById("result");
+
+      let output = "<ul>";
+
+      for (let i = 0; i < userlist.length; i++) {
+        if (userlist[i].country === selectedCountry) {
+          output += "<li><strong>" + userlist[i].name + "</strong> – " + userlist[i].salary + "</li>";
+        }
+      }
+
+      output += "</ul>";
+      resultDiv.innerHTML = output;
+    }
+
+    populateDropdown();
+    filterByCountry();
+  </script>
+
+</body>
+</html>
