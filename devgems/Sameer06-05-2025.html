@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Javascript Logic class</title>
+
+ 
+   
+<script>
+  // 1. Print all elements of an array using a for loop.
+  function printArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+}
+
+printArray([1, 2, 3, 4]); 
+
+// 2. Find the sum of all numbers in an array using a for loop.
+function sumArray(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+
+console.log(sumArray([1, 2, 3, 4]));
+
+// 3. Add 1 to each number in an array using a for loop.
+function addOneToEach(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] += 1;
+    }
+    return arr;
+}
+
+console.log(addOneToEach([1, 2, 3])); 
+
+
+// 4. Multiply each element in an array by 2 using a for loop.
+function multiplyByTwo(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] *= 2;
+    }
+    return arr;
+}
+
+console.log(multiplyByTwo([1, 2, 3])); 
+
+// 5. Print the first element of an array using a for loop.
+function printFirstElement(arr) {
+    if (arr.length > 0) {
+        console.log(arr[0]);
+    }
+}
+
+printFirstElement([1, 2, 3]);
+
+// 6. Print the last element of an array using a for loop.
+function printLastElement(arr) {
+    if (arr.length > 0) {
+        console.log(arr[arr.length - 1]);
+    }
+}
+
+printLastElement([1, 2, 3]);
+
+// 7. Check if all numbers in an array are positive using a for loop.
+function allPositive(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] <= 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(allPositive([1, 2, 3])); 
+console.log(allPositive([-1, 2, 3]));
+
+
+// 8. Print the elements of an array in reverse order using a for loop.
+function printReverse(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        console.log(arr[i]);
+    }
+}
+
+printReverse([1, 2, 3]); 
+
+
+//9. Count how many times the number 5 appears in an array using a for loop.
+function countFives(arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 5) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(countFives([5, 2, 5, 1, 5])); 
+
+// 10. Return the smallest number in an array using a for loop.
+function findSmallest(arr) {
+    let smallest = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+        }
+    }
+    return smallest;
+}
+
+console.log(findSmallest([3, 2, 8, 1])); 
+
+
+
+
+</script>
+  
+    
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>
+
+</body>
+
+</html>
